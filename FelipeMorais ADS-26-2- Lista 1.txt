@@ -1,0 +1,134 @@
+Felipe Morais Oliveira Campos - ADS 2026/2  
+
+Exercício 1)  
+
+ 
+a = int(input('Digite o valor a: ')) 
+
+b = int(input('Digite o valor b: ')) 
+
+print('a + b = ', a + b) 
+
+ 
+
+Exercício 2) 
+
+a = float(input('digite um valor em metros: ')) 
+
+print('valor em metros = ', a, ' convertido em milimetros', a*1000) 
+
+ 
+
+Exercício 3) 
+
+print("Escreva um programa que leia a quantidade de dias, horas, minutos e segundos do usuário. Calcule o total em segundos") 
+
+dias = int(input('Digite a quantidade de dias:')) 
+
+horas = int(input('Digite a quantidade de horas: ')) 
+
+minutos = int(input('Digite a quantidade de segundos: ')) 
+
+print('O total em segundos é: ', (dias*24*60*60) +  (horas*60*60) + (minutos*60)) 
+
+ 
+
+Exercício 4) 
+
+print("Faça um programa que calcule o aumento de um salário. Ele deve solicitar o valor do salário e a porcentagem do aumento. Exiba o valor do aumento e do novo salário.") 
+
+salario = float(input('Digite o salário: ')) 
+
+aumento = float(input('Digite a porcetagem do aumento: ')) 
+
+print('O valor do aumento:', salario * aumento/100) 
+
+print('O novo salario: ', salario + salario * aumento/100) 
+
+ 
+
+Exercício 5) 
+
+print("Solicite o preço de uma mercadoria e o percentual de desconto. Exiba o valor do desconto e o preço a pagar") 
+
+mercadoria = float(input('Digite o valor da mercadoria: ')) 
+
+desconto = float(input('Digite o percentual de desconto: ')) 
+
+print('O valor do desconto:', mercadoria * desconto/100) 
+
+print('O preço a pagar: ', mercadoria - mercadoria * desconto/100) 
+
+                 
+
+Exercício 6) 
+
+print("Calcule o tempo de uma viagem de carro. Pergunte a distância a percorrer e a velocidade média esperada para a viagem") 
+
+distancia = float(input('Digite a distância (km): ')) 
+
+vel_media = float(input('Digite a velocidade média (km/h): ')) 
+
+print('O tempo da viagem em horas: ', distancia / vel_media, ' horas') 
+
+   
+
+Exercício 7) 
+
+print("Converta uma temperatura digitada em Celsius para Fahrenheit. F = 9*C/5 + 32") 
+
+t_celsius = float(input('Digite a temperatura em celsius: ')) 
+
+print('A temperatura ', t_celsius, ' ºC é em Fahrenheit = ', ((9*t_celsius)/5) + 32) 
+
+  
+
+ Exercício 8) 
+
+print("Faça agora o contrário, de Fahrenheit para Celsius ") 
+
+t_farenheit = float(input('Digite a temperatura em Fahrenheit: ')) 
+
+print('A temperatura ', t_farenheit, ' ºF  em Celsisus e´= ',  (t_farenheit - 32) * 5/9), 'ºC') 
+
+ 
+
+Exercício 9) 
+
+print('Escreva um programa que pergunte a quantidade de km percorridos por um carro alugado pelo usuário, assim como a quantidade de dias pelos quais o carro foi alugado.') 
+
+print('Calcule o preço a pagar, sabendo que o carro custa R$ 60,00 por dia e R$ 0,15 por km rodado') 
+
+dias = int(input('Digite a quantidade de dias alugados: ')) 
+
+kilometer = int(input('Digite a quantidade de km percorridos: ')) 
+
+valor  = (float(kilometer) * 0.15) + 60*dias 
+
+print('O preço a pagar é: R$ ', valor) 
+
+  
+
+                 
+
+Exercício 10) 
+
+print('Escreva um programa para calcular a redução do tempo de vida de um fumante. Pergunte a quantidade de cigarros fumados por dia e quantos anos ele já fumou.') 
+
+print('Considere que um fumante perde 10 minutos de vida a cada cigarro, calcule quantos dias de vida um fumante perderá.') 
+
+print('Exiba o total de dias:') 
+
+fumados = int(input('Quantos cigarros fumados por dia: ')) 
+
+anos = int(input('Quantos anos fumando: ')) 
+
+print('A quantidade de dias perdidios é: ', (fumados * (anos * 365))/1440) 
+
+  
+
+Exercício 11) 
+
+print('Sabendo que str( ) converte valores numéricos para string, calcule quantos dígitos há em 2 elevado a dez mil') 
+
+ print('Resultado: ', len(str(2**10000))) 
