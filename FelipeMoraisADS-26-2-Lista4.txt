@@ -1,0 +1,152 @@
+Aluno: Felipe Morais Oliveira Campos	
+Turma: ADS-2026/2
+Exercício 1) 
+
+import random 
+print('Sorteie 10 inteiros entre 1 e 100 para uma lista e descubra o maior e o menor valor, sem usar as funções max e min') 
+lista = [] 
+menor = 100 
+maior = 0 
+for i in range(1, 10): 
+    lista.append(random.randint(1, 100)) 
+
+print('Lista: ', str(lista)) 
+
+for x in lista: 
+    if menor >= x: 
+        menor = x 
+    if maior <= x: 
+        maior = x 
+
+print('O maior: ', maior, '| O menor: ', menor) 
+
+Exercício 2)
+import random 
+
+print('Sorteie 20 inteiros entre 1 e 100 num a lista. Armazene os números pares na lista PAR e os números ímpares na lista IMPAR. Imprima a s três lista s') 
+
+lista = [] 
+par = [] 
+impar = [] 
+for i in range(1, 20): 
+    lista.append(random.randint(1, 100)) 
+ for x in lista: 
+    if x % 2: 
+        impar.append(x) 
+    else: 
+        par.append(x) 
+
+         
+print('Lista geral:', str(lista)) 
+print('Lista par:', str(par)) 
+print('Lista impar:', str(impar)) 
+
+     
+
+Exercício 3) 
+
+import random 
+
+print('Faça um programa que crie dois vetores com 10 elementos aleatórios entre 1 e 100.') 
+print('Gere um terceiro vetor de 20 elementos, cujos valores deverão ser compostos pelos elementos intercalados dos dois outros vetores. Imprima os três vetores.') 
+
+lista = [] 
+v1 = [] 
+v2 = [] 
+
+for i in range(1, 10): 
+    v1.append(random.randint(1, 100)) 
+    v2.append(random.randint(1, 100)) 
+  
+for x in range(0, 9): 
+    lista.append(v1[x]) 
+    lista.append(v2[x]) 
+
+     
+print('Lista 1:', str(v1)) 
+print('Lista 2:', str(v2)) 
+print('Lista intercalada:', str(lista)) 
+
+Exercício 4) 
+
+print('Seja o statement sobre diversidade:') 
+print('“The Python Software Foundation and the global Python community welcome and encourage participation by everyone') 
+print('Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles') 
+print(' We want our community to be more diverse: whoever you are, and whatever your background, we welcome you.”') 
+print('Gere uma lista de palavras deste texto com split () , a seguir crie uma lista com as palavras que começam ou terminam com uma das letras “python”') 
+print('Imprima a lista resultante. Nãos e esqueça de remover antes os caracteres especiais e cuidado com maiúsculas e minúsculas.') 
+  
+     
+texto = "The Python Software Foundation and the global Python community welcome and encourage participation by everyone. Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles. We want our community to be more diverse: whoever you are, and whatever your background, we welcome you." 
+  
+lista = texto.split(' ') 
+result = [] 
+py_lower = ['p','y','t','h','o','n'] 
+py_upper = ['P', 'Y', 'T', 'H', 'O', 'N'] 
+i = 0 
+  
+
+for x in lista: 
+    x = str(x).replace(',', '') 
+    x = str(x).replace(':', '') 
+    x = str(x).replace('.', '') 
+    lista[i] = x 
+    i += 1 
+  
+
+for x in lista: 
+    j = 0 
+    for y in py_lower: 
+        if x.startswith(y) or x.endswith(y) or x.startswith(py_upper[j]) or x.endswith(py_upper[j]): 
+            result.append(x) 
+            break 
+        j += 1 
+        
+print(str(lista)) 
+print('Lista finalizada: ') 
+print(str(result)) 
+
+Exercício 5) 
+
+print('Seja o statement sobre diversidade:') 
+
+print('“The Python Software Foundation and the global Python community welcome and encourage participation by everyone') 
+
+print('Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles') 
+
+print(' We want our community to be more diverse: whoever you are, and whatever your background, we welcome you.”') 
+
+print('Seja o mesmo texto acima “splitado”.Calcule quantas palavras possuem uma das letras “python” e que tenham mais de 4 caracteres') 
+
+print(' Não se esqueça detransformar maiúsculas paraminúsculas ede remover antes os caracteres especiais.') 
+    
+
+texto = "The Python Software Foundation and the global Python community welcome and encourage participation by everyone. Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles. We want our community to be more diverse: whoever you are, and whatever your background, we welcome you." 
+  
+lista = texto.split(' ') 
+result = [] 
+py_lower = ['p','y','t','h','o','n'] 
+py_upper = ['P', 'Y', 'T', 'H', 'O', 'N'] 
+i = 0 
+  
+for x in lista: 
+    x = str(x).replace(',', '') 
+    x = str(x).replace(':', '') 
+    x = str(x).replace('.', '') 
+    lista[i] = x 
+    i += 1 
+  
+
+for x in lista: 
+    j = 0 
+    for y in py_lower: 
+        if len(x) > 4: 
+            if x.startswith(y) or x.endswith(y) or x.startswith(py_upper[j]) or x.endswith(py_upper[j]): 
+                result.append(x) 
+                break 
+        j += 1 
+         
+         
+print(str(lista)) 
+print('Lista finalizada: ') 
+print(str(result)) 
