@@ -93,11 +93,7 @@ print('A decomposição do numero ', num , 'é : ', str(result))
   
 
 Exercício 5) 
-
 print('Faça um programa que peça um inteiro positivo e o mostre invertido. Ex.: 1234 gera 4321') 
-
 n = int(input('Difite um numero inteiro positivo: ')) 
-
 ninv = "".join(reversed(str(n))) 
-
 print('O numero, ', n ,' invertido é: ', ninv) 
