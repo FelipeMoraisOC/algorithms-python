@@ -1,0 +1,119 @@
+Nome: Felipe Morais Oliveira Campos
+Turma: ADS-2026/2
+
+# A. multstring
+# seja uma string s e um inteiro positivo n
+# retorna uma string com n cópias da string original
+# multstring('Hi', 2) -> 'HiHi'
+def multstring(s, n):
+    r = ''
+    for _ in range(n):
+        r += s
+    return r
+
+
+# B. string_splosion
+# string_splosion('Code') -> 'CCoCodCode'
+# string_splosion('abc') -> 'aababc'
+# string_splosion('ab') -> 'aab'
+def string_splosion(s):
+    r = ''
+    for i in range(len(s)):
+        for j in range(i + 1):
+            r += s[j]
+    return r
+
+
+# print("string_splosion('Code')", string_splosion('Code'))
+# print("string_splosion('abc')", string_splosion('abc'))
+# print("string_splosion('ab')", string_splosion('ab'))
+
+
+# C. array_count9
+# conta quantas vezes aparece o 9 numa lista nums
+def array_count9(nums):
+    count = 0
+    for x in nums:
+        if x == 9: count += 1
+        
+    return count
+
+# D. array_front9
+# verifica se pelo menos um dos quatro primeiros é nove
+# array_front9([1, 2, 9, 3, 4]) -> True
+# array_front9([1, 2, 3, 4, 9]) -> False
+# array_front9([1, 2, 3, 4, 5]) -> False
+def array_front9(nums):
+    
+    for i in range(len(nums)):
+        if i > 3: 
+            return False
+        if nums[i] == 9:
+            return True
+    return False
+
+# E. hello_name
+# seja uma string name
+# hello_name('Bob') -> 'Hello Bob!'
+# hello_name('Alice') -> 'Hello Alice!'
+# hello_name('X') -> 'Hello X!'
+def hello_name(name):
+  return f"Hello {name}!"
+
+# F. make_tags
+# make_tags('i', 'Yay'), '<i>Yay</i>'
+# make_tags('i', 'Hello'), '<i>Hello</i>'
+# make_tags('cite', 'Yay'), '<cite>Yay</cite>'
+def make_tags(tab, word):
+  return f"<{tab}>{word}</{tab}>"
+
+# G. extra_end
+# seja um string s com no mínimo duas letras
+# retorna três vezes as duas últimas letras
+# extra_end('Hello'), 'lololo'
+# extra_end('ab'), 'ababab'
+# extra_end('Hi'), 'HiHiHi'  
+def extra_end(s):
+    r = ''
+    for _ in range(3):
+        r += s[(len(s) - 2)]
+        r += s[(len(s) - 1)]
+    return r
+    
+print("extra_end('ab'):", extra_end('ab'))    
+
+
+# H. first_half
+# seja uma string s
+# retorna a primeira metade da string
+# first_half('WooHoo') -> 'Woo'
+# first_half('HelloThere') -> 'Hello'
+# first_half('abcdef') -> 'abc'
+def first_half(s):
+    return str(s)[:int(len(s) / 2)]
+     
+#print(" first_half('WooHoo') -> 'Woo'", first_half('WooHoo'))
+#print(" # first_half('HelloThere') -> 'Hello'", first_half('HelloThere'))
+
+# I. sem_pontas
+# seja uma string s de pelo menos dois caracteres
+# retorna uma string sem o primeiro e último caracter
+# without_end('Hello') -> 'ell'
+# without_end('python') -> 'ytho'
+# without_end('coding') -> 'odin'
+def sem_pontas(s):
+  return str(s)[1:int(len(s) - 1)]
+
+#print("without_end('edm') -> 'd'", sem_pontas('edm'))
+
+# J. roda2
+# rodar uma string s duas posições
+# a string possui pelo menos 2 caracteres
+# left2('Hello') -> 'lloHe'
+# left2('Hi') -> 'Hi'
+def roda2(s):
+  return f"{str(s)[2:]}{str(s)[0:2]}"
+
+
+
+
